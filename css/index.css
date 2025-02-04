@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+body{
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+}
+  
+header{
+  background-color: #0f0c57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+.logo{
+  width: 50%; 
+  max-width: 150px;
+  height: auto;
+}
+
+.titulo{
+  font-size: 2.5em;
+  font-weight: normal;
+  padding: 15px;
+  position:relative;
+  color: #dda520;
+  padding-left: 10%;
+  height: 140px;
+  left: 260px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo2{
+  font-size: 2.5em;
+  font-weight: normal;
+  padding: 15px;
+  position:relative;
+  color:#dda520;
+  padding-left: 10%;
+  height: 50px;
+  right: 430px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Distribui os itens */
+}
+
+.texto{
+  width: 50%; /* Ocupa metade da tela */
+  text-align: justify; /* Garante que o texto fique alinhado à esquerda */
+  margin-left: 50px;
+}
+
+.imagem{
+  width: 40%; /* Ajuste conforme necessário */
+}
+
+.sobre{
+  color:#dda520;
+}
+
+.aviso{
+  text-align: center;
+  padding-top: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+}
+
+main{
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+  
+nav ul li{
+  margin: 0 25px;
+}
+  
+nav ul li a{
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 125%;
+}
+  
+nav ul li a:hover{
+  
+  color: #dda520;
+}
+  
+footer {
+  background: #0f0c57;
+  color: #dda520;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
