@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Meta charset e responsividade -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da página -->
   <title>Sabor Gourmet - Menu</title>
-  <link rel="stylesheet" href="css/index.css">
+  
+  <!-- Link para o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="css/menu.css">
+  
+  <!-- Ícone da página -->
   <link rel="icon" type="image/png" href="img/icone.png">
 </head>
 <body>
+  <!-- Cabeçalho com logo e título -->
   <header>
-    <h1>Cardápio</h1>
-  </header>
+    <!-- Logo do restaurante -->
+    <img src="img/Logo_Sabor_Gourmet.png" alt="Logo" class="logo">
     
+    <!-- Título da página (Menu) -->
+    <h1 class="titulo">Menu!</h1>
+  </header>
+
+  <!-- Navegação principal -->
+  <main>
+    <nav>
+      <ul>
+        <!-- Links de navegação para outras páginas -->
+        <li><a href="index.html">Início</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <!-- Conteúdo principal do menu -->
+  <main>
+    <!-- Seção de Entradas -->
     <section>
       <h2>Entradas</h2>
       <ul>
-        <li>Bruschetta - R$ 18,00</li>
-        <li>Salada Caprese - R$ 22,00</li>
+        <!-- Primeira entrada (Bruschetta) -->
+        <li>
+          <input type="checkbox" class="item" data-preco="18.00">
+          Bruschetta - R$ 18,00
+          <img src="img/brusqueta.jpg" alt="Bruschetta">
+        </li>
+        
+        <!-- Segunda entrada (Salada Caprese) -->
+        <li>
+          <input type="checkbox" class="item" data-preco="22.00">
+          Salada Caprese - R$ 22,00
+          <img src="img/saladacaprese.jpg" alt="Salada Caprese">
+        </li>
       </ul>
     </section>
 
+    <!-- Seção de Pratos Principais -->
     <section>
       <h2>Pratos Principais</h2>
       <table>
         <thead>
+          <!-- Cabeçalho da tabela -->
           <tr>
+            <th>Selecionar</th>
             <th>Prato</th>
             <th>Descrição</th>
             <th>Preço</th>
           </tr>
         </thead>
         <tbody>
+          <!-- Primeiro prato principal (Risoto de Funghi) -->
           <tr>
-            <td>Risoto de Funghi</td>
+            <td><input type="checkbox" class="item" data-preco="45.00"></td>
+            <td>Risoto de Funghi <br>
+              <img src="img/risotodefung.jpg" alt="Risoto de Funghi">
+            </td>
             <td>Risoto cremoso com cogumelos frescos</td>
             <td>R$ 45,00</td>
           </tr>
+          
+          <!-- Segundo prato principal (Filé Mignon ao molho de vinho) -->
           <tr>
-            <td>Filé Mignon ao molho de vinho</td>
+            <td><input type="checkbox" class="item" data-preco="58.00"></td>
+            <td>Filé Mignon ao molho de vinho <br>
+              <img src="img/filemignon.jpg" alt="Filé Mignon">
+            </td>
             <td>Filé mignon grelhado com molho reduzido de vinho</td>
             <td>R$ 58,00</td>
           </tr>
@@ -45,17 +96,76 @@
       </table>
     </section>
 
+    <!-- Seção de Sobremesas -->
     <section>
       <h2>Sobremesas</h2>
       <ul>
-        <li>Tiramisu - R$ 18,00</li>
-        <li>Gelato de Pistache - R$ 20,00</li>
+        <!-- Primeira sobremesa (Tiramisu) -->
+        <li>
+          <input type="checkbox" class="item" data-preco="18.00">
+          Tiramisu - R$ 18,00
+          <img src="img/tiramisu.jpg" alt="Tiramisu">
+        </li>
+        
+        <!-- Segunda sobremesa (Gelato de Pistache) -->
+        <li>
+          <input type="checkbox" class="item" data-preco="20.00">
+          Gelato de Pistache - R$ 20,00
+          <img src="img/gelatopistache.png" alt="Gelato de Pistache">
+        </li>
       </ul>
+    </section>
+
+    <!-- Seção do total do pedido -->
+    <section id="total">
+      <h2>Total do Pedido</h2>
+      <!-- Exibe o valor total -->
+      <p>Total: R$ <span id="valor-total">0.00</span></p>
+      
+      <!-- Botão para realizar a compra -->
+      <button id="btn-comprar">Comprar</button>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Sabor Gourmet | Todos os direitos reservados.</p>
+    <p>&copy; 2025 Sabor Gourmet | Wuallan D'Avilla.</p>
   </footer>
+
+  <script>
+    // Seleciona todos os checkboxes
+    const checkboxes = document.querySelectorAll(".item");
+    const totalDisplay = document.getElementById("valor-total");  // Exibe o total
+    const btnComprar = document.getElementById("btn-comprar");  // Botão de compra
+
+    // Adiciona o evento de mudança nos checkboxes
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", () => {
+        let total = 0;
+        checkboxes.forEach(item => {
+          // Se o item estiver selecionado, soma o preço ao total
+          if (item.checked) {
+            total += parseFloat(item.dataset.preco);
+          }
+        });
+        // Atualiza o total na página
+        totalDisplay.textContent = total.toFixed(2);
+      });
+    });
+
+    // Evento de clique no botão de comprar
+    btnComprar.addEventListener("click", () => {
+      const total = parseFloat(totalDisplay.textContent);
+      
+      // Verifica se o total é maior que 0 antes de realizar a compra
+      if (total > 0) {
+        alert(`Compra realizada! Total: R$ ${total.toFixed(2)}`);
+      } else {
+        alert("Selecione pelo menos um item antes de comprar.");
+      }
+    });
+  </script>
+
 </body>
 </html>
+

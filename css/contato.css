@@ -1,79 +1,122 @@
-*{
+/* Reseta as margens e o preenchimento de todos os elementos e define o modelo de caixa */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-  
-body{
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #000000;
-}
-  
-header{
-  background-color: #0f0c57;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px;
+
+/* Estiliza o corpo do site */
+body {
+  font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+  color: #000000; /* Define a cor do texto como preto */
 }
 
-.logo{
-  width: 50%; 
-  max-width: 150px;
-  height: auto;
+/* Estiliza o cabeçalho */
+header {
+  background-color: #0f0c57; /* Define a cor de fundo do cabeçalho */
+  display: flex; /* Utiliza o modelo flexbox */
+  justify-content: space-between; /* Espaça os itens de forma que fiquem nas extremidades */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  padding: 2px; /* Adiciona um pequeno preenchimento */
 }
 
-.titulo{
-  font-size: 2.5em;
-  font-weight: normal;
-  padding: 30px;
-  position:relative;
-  color: #dda520;
-  padding-left: 10%;
-  height: 120px;
-  font-family: 'Courier New', Courier, monospace;
-  right: 625px;
+/* Estiliza o logo */
+.logo {
+  width: 50%; /* Define a largura do logo como 50% do seu contêiner */
+  max-width: 150px; /* Limita a largura máxima do logo a 150px */
+  height: auto; /* Mantém a proporção original da imagem */
 }
 
-main{
-  padding: 20px;
-  text-align: center;
+/* Estiliza o título */
+.titulo {
+  font-size: 2.5em; /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão */
+  font-weight: normal; /* Define o peso da fonte como normal */
+  padding: 30px; /* Adiciona 30px de preenchimento em todos os lados */
+  position: relative; /* Permite o uso de propriedades como 'right' */
+  color: #dda520; /* Define a cor do texto como dourado */
+  padding-left: 10%; /* Adiciona 10% de preenchimento à esquerda */
+  height: 120px; /* Define uma altura fixa para o título */
+  font-family: 'Courier New', Courier, monospace; /* Define a fonte como Courier */
+  right: 645px; /* Move o título para a direita */
 }
 
-nav ul{
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-}
-  
-nav ul li{
-  margin: 0 25px;
-}
-  
-nav ul li a{
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 125%;
-}
-  
-nav ul li a:hover{
-  color: #dda520;
+/* Estiliza o conteúdo principal */
+main {
+  padding: 20px; /* Adiciona 20px de preenchimento */
 }
 
-.mapa{
-margin-bottom: 70px;
-margin-top: 60px;
+/* Estiliza a barra de navegação */
+nav ul {
+  display: flex; /* Utiliza o modelo flexbox */
+  justify-content: center; /* Centraliza os itens */
+  list-style-type: none; /* Remove os marcadores das listas */
 }
 
+/* Estiliza cada item da lista de navegação */
+nav ul li {
+  margin: 0 20px; /* Adiciona 20px de margem à esquerda e à direita de cada item */
+}
+
+/* Estiliza os links dentro da navegação */
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do link como um cinza escuro */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte */
+  font-size: 125%; /* Aumenta o tamanho da fonte em 25% */
+}
+
+/* Estiliza o efeito de hover nos links da navegação */
+nav ul li a:hover {
+  color: #dda520; /* Muda a cor para dourado quando o link é hoverado */
+}
+
+/* Estiliza o container de contato */
+.contato-container {
+  max-width: 600px; /* Limita a largura máxima para 600px */
+  margin: 40px auto; /* Adiciona 40px de margem superior e inferior, e centraliza o container */
+  background: #f8f8f8; /* Define um fundo cinza claro */
+  padding: 20px; /* Adiciona 20px de preenchimento */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+}
+
+/* Estiliza os parágrafos dentro do container de contato */
+.contato-container p {
+  font-size: 18px; /* Define o tamanho da fonte dos parágrafos */
+  margin: 10px 0; /* Adiciona 10px de margem superior e inferior */
+}
+
+/* Estiliza os links dentro do container de contato */
+.contato-container a {
+  display: block; /* Faz o link se comportar como um bloco (ocupa toda a largura disponível) */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Torna o link em negrito */
+  color: #0f0c57; /* Define a cor do link */
+  margin-top: 5px; /* Adiciona uma margem superior de 5px */
+}
+
+/* Estiliza o efeito de hover nos links do contato */
+.contato-container a:hover {
+  color: #dda520; /* Muda a cor do link para dourado quando hoverado */
+}
+
+/* Estiliza o mapa */
+.mapa {
+  margin: 30px auto; /* Adiciona 30px de margem superior e inferior, centraliza o mapa */
+  display: block; /* Faz com que o mapa se comporte como um bloco */
+  border-radius: 10px; /* Arredonda os cantos do mapa */
+  margin-bottom: 70px; /* Adiciona uma margem inferior de 70px */
+}
+
+/* Estiliza o rodapé */
 footer {
-  background: #0f0c57;
-  color: #dda520;
-  text-align: center;
-  padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  background: #0f0c57; /* Define o fundo do rodapé como uma cor escura */
+  color: #dda520; /* Define a cor do texto como dourado */
+  text-align: center; /* Centraliza o texto */
+  padding: 15px; /* Adiciona 15px de preenchimento */
+  position: fixed; /* Deixa o rodapé fixo na parte inferior da tela */
+  bottom: 0; /* Posiciona o rodapé na parte inferior */
+  width: 100%; /* Define a largura do rodapé para 100% da tela */
 }

@@ -1,33 +1,161 @@
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f4f4f4;
-  border-radius: 8px;
+/* Estilos globais */
+* {
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que o tamanho total de um elemento inclua bordas e preenchimento */
 }
-  
-label {
-  display: block;
-  margin: 10px 0 5px;
+
+body {
+  font-family: 'Arial', sans-serif; /* Define a fonte usada no corpo da página */
+  line-height: 1.6; /* Define a altura da linha do texto */
+  color: #000000; /* Define a cor do texto para preto */
 }
-  
-input, textarea {
-  width: 98%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+
+header {
+  background-color: #0f0c57; /* Define a cor de fundo do cabeçalho */
+  display: flex; /* Organiza os elementos filhos (logo e título) com flexbox */
+  justify-content: space-between; /* Distribui o espaço entre os itens de forma equilibrada */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  padding: 2px; /* Define um pequeno preenchimento no cabeçalho */
 }
-  
-button {
-  background-color: #ff6f61;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+.logo {
+  width: 50%; /* A logo ocupa 50% da largura do contêiner */
+  max-width: 150px; /* A largura máxima da logo é 150px */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção da imagem */
 }
-  
-button:hover {
-  background-color: #d85a4e;
+
+.titulo {
+  font-size: 2.5em; /* Define o tamanho da fonte do título */
+  font-weight: normal; /* Define o peso da fonte para normal */
+  padding: 30px; /* Define o preenchimento ao redor do título */
+  position: relative; /* Torna o posicionamento do título relativo ao seu contêiner */
+  color: #dda520; /* Define a cor do título */
+  padding-left: 10%; /* Adiciona um preenchimento à esquerda do título */
+  height: 120px; /* Define a altura do título */
+  font-family: 'Courier New', Courier, monospace; /* Define a fonte do título */
+  right: 670px; /* Ajusta a posição do título para a direita */
 }
+
+nav ul {
+  display: flex; /* Organiza os itens de navegação horizontalmente com flexbox */
+  justify-content: center; /* Centraliza os itens de navegação */
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+}
+
+nav ul li {
+  margin: 0 25px; /* Adiciona margem de 25px entre os itens de navegação */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do texto dos links */
+  font-weight: bold; /* Define o peso da fonte para negrito */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte dos links */
+  font-size: 125%; /* Define o tamanho da fonte dos links */
+}
+
+nav ul li a:hover {
+  color: #dda520; /* Altera a cor do link para dourado quando o mouse passa sobre ele */
+}
+
+main {
+  width: 80%; /* Define a largura do conteúdo principal */
+  margin: 20px auto; /* Centraliza o conteúdo e adiciona margem */
+  background: white; /* Define o fundo do conteúdo como branco */
+  padding: 20px; /* Adiciona um preenchimento ao redor do conteúdo */
+  border-radius: 10px; /* Adiciona bordas arredondadas ao conteúdo */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao redor do conteúdo */
+}
+
+h2 {
+  border-bottom: 2px solid #0f0c57; /* Adiciona uma linha embaixo do título */
+  padding-bottom: 5px; /* Adiciona um pequeno preenchimento abaixo da linha */
+  margin-bottom: 15px; /* Adiciona margem abaixo do título */
+}
+
+ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o preenchimento da lista */
+}
+
+ul li {
+  padding: 8px; /* Adiciona preenchimento dentro de cada item da lista */
+  font-size: 18px; /* Define o tamanho da fonte dos itens da lista */
+  display: flex; /* Organiza os itens da lista com flexbox */
+  align-items: center; /* Alinha os itens da lista verticalmente */
+  gap: 15px; /* Adiciona espaçamento entre o texto e a imagem na lista */
+}
+
+ul li img {
+  width: 80px; /* Define a largura da imagem */
+  height: 80px; /* Define a altura da imagem */
+  border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
+}
+
+table {
+  width: 100%; /* A tabela ocupa 100% da largura disponível */
+  border-collapse: collapse; /* Faz com que as bordas da tabela se juntem */
+  margin-top: 10px; /* Adiciona margem superior à tabela */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Adiciona bordas finas às células da tabela */
+  padding: 10px; /* Adiciona preenchimento dentro das células */
+  text-align: left; /* Alinha o texto à esquerda nas células */
+}
+
+th {
+  background-color: #0f0c57; /* Define o fundo das células de título como azul escuro */
+  color: white; /* Define a cor do texto das células de título como branco */
+}
+
+td img {
+  width: 100px; /* Define a largura das imagens dentro das células da tabela */
+  height: 100px; /* Define a altura das imagens dentro das células */
+  display: block; /* Garante que a imagem seja exibida como bloco */
+  margin-top: 5px; /* Adiciona margem superior à imagem */
+  border-radius: 5px; /* Adiciona bordas arredondadas às imagens */
+}
+
+#total {
+  margin-top: 20px; /* Adiciona margem superior ao total */
+  padding: 15px; /* Adiciona preenchimento ao total */
+  background: #f4f4f4; /* Define o fundo do total como cinza claro */
+  text-align: center; /* Centraliza o texto do total */
+  font-size: 20px; /* Define o tamanho da fonte do total */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao total */
+  margin-bottom: 40px; /* Adiciona margem inferior ao total */
+}
+
+footer {
+  background: #0f0c57; /* Define o fundo do rodapé como azul escuro */
+  color: #dda520; /* Define a cor do texto do rodapé como dourado */
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 15px; /* Adiciona preenchimento ao rodapé */
+  position: fixed; /* Torna o rodapé fixo na parte inferior da página */
+  bottom: 0; /* Posiciona o rodapé na parte inferior da página */
+  width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+}
+
+/* Estilos do botão Comprar */
+#comprar-btn {
+  display: block; /* Faz o botão se comportar como um bloco */
+  width: 200px; /* Define a largura do botão */
+  margin: 20px auto; /* Centraliza o botão na página e adiciona margem */
+  padding: 15px; /* Adiciona preenchimento ao botão */
+  font-size: 18px; /* Define o tamanho da fonte do botão */
+  background-color: #dda520; /* Define o fundo do botão como dourado */
+  color: #ffffff; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+  cursor: pointer; /* Altera o cursor para mão ao passar sobre o botão */
+  text-align: center; /* Centraliza o texto dentro do botão */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+#comprar-btn:hover {
+  background-color: #b38e18; /* Altera a cor de fundo do botão quando o mouse passa sobre ele */
+}
+
+

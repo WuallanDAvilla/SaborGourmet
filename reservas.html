@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Meta charset e responsividade -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da página -->
   <title>Sabor Gourmet - Página Inicial</title>
+  
+  <!-- Link para o arquivo de estilos CSS -->
   <link rel="stylesheet" href="css/reservas.css">
+  
+  <!-- Ícone da página -->
   <link rel="icon" type="image/png" href="img/icone.png">
 </head>
 <body>
+  <!-- Cabeçalho com logo e título -->
   <header>
+    <!-- Logo do restaurante -->
     <img src="img/Logo_Sabor_Gourmet.png" alt="Logo" class="logo">
+    
+    <!-- Título da página (Reservas) -->
     <h1 class="titulo">Reservas!</h1>
   </header>
 
+  <!-- Navegação principal -->
   <main>
     <nav>
       <ul>
+        <!-- Links de navegação para outras páginas -->
         <li><a href="index.html">Início</a></li>
-        <li><a href="menu.html">Cardápio</a></li>
+        <li><a href="menu.html">Menu</a></li>
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </main>
- 
+
   <hr>
 
+  <!-- Formulário de reservas -->
   <main>
     <section>
+      <!-- Formulário de reserva -->
       <form action="#" method="POST">
+        <!-- Campo para nome -->
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
+        <!-- Campo para data e hora -->
         <label for="datahora">Data e Hora:</label>
         <input type="datetime-local" id="datahora" name="datahora" required>
 
+        <!-- Campo para número de pessoas -->
         <label for="pessoas">Número de Pessoas:</label>
         <input type="number" id="pessoas" name="pessoas" min="1" required>
 
+        <!-- Campo para preferências especiais -->
         <label for="preferencias">Preferências Especiais:</label>
         <textarea id="preferencias" name="preferencias"></textarea>
 
+        <!-- Botão de envio do formulário -->
         <button type="submit">Enviar Reserva</button>
       </form>
     </section>
   </main>
+
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Sabor Gourmet | Wuallan D'Avilla.</p>
   </footer>
